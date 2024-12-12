@@ -1,0 +1,32 @@
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    gap: 0px;
+    grid-template-columns: 1.5fr 6fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+.content{
+    background-color: black;
+    color: white;
+    grid-row: 2 / 4;
+    grid-column: 2 / 6;
+}
+
+.header{
+    background-color: blue;
+    color: white;
+    grid-column: 2 / 6;
+    grid-row: ;
+}
+
+.sidebar{
+    background-color: beige;
+    grid-row: 1 / 4;
+}
