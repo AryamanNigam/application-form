@@ -8,7 +8,7 @@ html, body {
     height: 100%;
     display: grid;
     gap: 0px;
-    grid-template-columns: 1.5fr 6fr;
+    grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 4fr;
 }
 
@@ -23,10 +23,50 @@ html, body {
     background-color: blue;
     color: white;
     grid-column: 2 / 6;
-    grid-row: ;
 }
 
 .sidebar{
-    background-color: beige;
+    background-color: #94a3b8;
     grid-row: 1 / 4;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebargroup1{
+    padding-bottom: 25px;
+}
+
+#dash{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 2rem;
+    padding-bottom: 10px;
+
+    gap: 0.35rem;
+    flex: none;
+}
+
+.group {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Ensures vertical alignment */
+    margin-left: 1.3rem;
+    gap: 0.5rem; /* Scalable spacing between elements */
+    padding: 0.5rem 1rem; /* Scalable padding */
+    font-size: 1rem; /* Relative font size */
+    
+}
+
+.group embed {
+    flex-shrink: 0;
+    height: 1.5rem;
+    width: 1.5rem; 
+}
+
+.group div {
+    flex-grow: 1; /* Allow the text to expand */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow if text is too long */
+    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
 }
