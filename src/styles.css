@@ -222,6 +222,7 @@ button {
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr auto;
     gap: 1rem;
+    padding-bottom: 30px;
 }
 
 div.projects > div:first-child {
@@ -283,9 +284,72 @@ div.projects > div:first-child {
     flex-direction: column;
     justify-content: flex-end;
     font-size: 2.5rem;
-    margin-right: 10px;
     margin-bottom: -15px;
     min-width: 50%;
     font-size: 2.5rem;
     font-weight: bold;
 }
+
+.tabs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.ann{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #e4e4e7;
+    border-radius: 10px;
+}
+
+.acard{
+    padding: 15px;
+}
+
+.acard > a{
+    font-size:larger;
+    font-weight: bold;
+}
+
+.ann > hr {
+    width:70%;
+    margin:0 auto;
+}
+
+.trending{
+    padding-top: 10px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.trending-card{
+    background-color: #e4e4e7;
+    border-radius: 10px;
+    margin-right: -10px;
+}
+
+.person{
+    display: flex;
+    align-items: center;
+}
+
+.person-info{
+    padding: 10px;
+}
+
+.person-info > a{
+    font-size: 25px;
+}
+
+.person:hover{
+    color:  rgb(250, 193, 159);
+}
+
+.person:hover embed {
+    filter: invert(84%) sepia(46%) saturate(469%) hue-rotate(330deg) brightness(96%) contrast(102%);
+}
+
+
+
+
