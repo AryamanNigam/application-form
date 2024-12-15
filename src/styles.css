@@ -16,15 +16,16 @@ html, body {
     min-height: 100%;
 }
 
-.header{
+.header {
     background-color: #d6d3d1a4;
     color: white;
     grid-column: 2 / 6;
     box-shadow: 23px 25px 5px black;
-
+    display: flex;
+    flex-direction: column;
 }
 
-.sidebar{
+.sidebar {
     background-color: #94a3b8;
     grid-row: 1 / 4;
     display: flex;
@@ -32,22 +33,21 @@ html, body {
     height: 100%;
 }
 
-a{
+a {
     color: black;
     text-decoration: none;
 }
 
-.sidebargroup1{
+.sidebargroup1 {
     padding-bottom: 25px;
 }
 
-#dash{
+#dash {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-right: 2rem;
     padding-bottom: 10px;
-
     gap: 0.35rem;
     flex: none;
 }
@@ -68,16 +68,15 @@ a{
 }
 
 .group:hover a {
-    color: aliceblue; /* Changes the <a> text color */
+    color: aliceblue;
 }
 
 .group:hover embed {
     filter: invert(92%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(105%) contrast(105%);
 }
 
-
-a:hover{
-    color:orange;
+a:hover {
+    color: orange;
     font-weight: bold;
 }
 
@@ -94,28 +93,23 @@ a:hover{
     text-overflow: ellipsis; 
 }
 
-.header{
-    display: flex;
-    flex-direction: column;
-}
-
-.c1, .c2{
+.c1, .c2 {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-bottom: 15px;
 }
 
-.c1{
+.c1 {
     justify-content: space-between;
     flex-wrap: nowrap;
 }
 
-.c2{
+.c2 {
     justify-content: space-between;
 }
 
-#search{
+#search {
     margin-top: 7px;
     display: flex;
     align-items: center;
@@ -128,7 +122,7 @@ a:hover{
     min-width: 20%;
 }
 
-input{
+input {
     width: 100%;
     max-width: 45rem;
     height: 2rem;
@@ -138,13 +132,13 @@ input{
     min-width: 20%;
 }
 
-#spfp{
+#spfp {
     border-radius: 50px;
-    height:40px;
+    height: 40px;
     width: 40px;
 }
 
-#profile-disp{
+#profile-disp {
     display: flex;
     align-items: center;
     padding: 1.5rem;
@@ -170,14 +164,13 @@ input{
     max-width: 100%;
 }
 
-
-img{
+img {
     height: 60px;
     width: 60px;
     border-radius: 30px;
 }
 
-.intro{
+.intro {
     height: 100px;
     gap: 0.5rem;
     display: flex;
@@ -189,20 +182,20 @@ img{
     flex-shrink: 0;
 }
 
-.name{
+.name {
     margin-bottom: 5px;
     flex-wrap: nowrap;
     font-size: 2.5rem;
     font-weight: 600;
 }
 
-.create{
+.create {
     display: flex;
     padding-right: 2rem;
     gap: 2.5rem;
 }
 
-button{
+button {
     color: white;
     height: 2.5rem;
     width: 10rem;
@@ -212,47 +205,53 @@ button{
     font-weight: bold;
 }
 
-.content{
+.content {
     background-color: whitesmoke;
     color: black;
     grid-row: 2 / 4;
     grid-column: 2 / 6;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto;
+    gap: 1rem;
 }
 
-.projects{
-    grid-column: 1 / 2;
+.projects {
+    grid-column: 1 / 3;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 3fr 3fr 3fr;
-    padding-bottom: 25px;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 1rem;
 }
 
-div.projects > div:first-child{
+div.projects > div:first-child {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
-    padding-bottom: 2px;
+    padding-top: 5px;
     padding-left: 15px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-end;
-    align-items: flex-start;
+    align-self: flex-end;
     font-size: 2.5rem;
     font-weight: bold;
     margin-right: 10px;
-}   
+    margin-bottom: -15px;
+    justify-content: space-between;
+    min-width: 50%;
+    max-height: 200px;
+}
 
-.projectsgrid{
+.projectsgrid {
     padding-left: 15px;
-    grid-column: 1 / 4;
+    grid-column: 1 / 2;
     grid-row: 2 / 5;   
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(345px, 1fr) );
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 10px;
 }
 
-.card{
+.card {
     padding: 10px;
     background-color: #e4e4e7;
     border-radius: 10px;
@@ -261,20 +260,32 @@ div.projects > div:first-child{
     flex-direction: column;
 }
 
-.card > div:nth-child(2){;
+.card > div:nth-child(2) {
     padding-top: 5px;
 }   
 
-.card > div:nth-child(3){
+.card > div:nth-child(3) {
     align-self: end;
     margin-top: auto;
 }
 
-.card:hover{
+.card:hover {
     background-color: rgb(250, 193, 159);
     transform: scale(1.01);
     box-shadow: 7px 0px 2px 0px #be0606f8 inset;
 }
 
-
-
+.announcements{
+    padding-top: 5px;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 2.5rem;
+    margin-right: 10px;
+    margin-bottom: -15px;
+    min-width: 50%;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
